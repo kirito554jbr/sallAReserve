@@ -3,7 +3,6 @@
 
 17/02/2025 :
 
-J'ai appris à créer un projet laravel et à créer un modèle, ainsi qu'à créer une migration, et j'ai créé une table dans la base de données.
-Je n'ai pas eu le temps de m'en rendre compte, mais j'ai appris à créer une 
-table dans la base de données.
-
+    I learned how to create a laravel project with command line, also what is    migration which is executing CRUD and it change your database schema ,  i mean  create new table , alter existing table , adding or modifying columns.
+    I also learned how to change the database , which is by changing it in the . env file .
+    In addittion i've done some researches on the architecture of laravel .
