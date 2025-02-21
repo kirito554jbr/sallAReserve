@@ -18,7 +18,7 @@
             <a class="text-white text-2xl font-bold" href="#">
                 Salle Reservation
             </a>
-            <ul class="flex space-x-4">
+            <ul class="hidden md:flex space-x-4">
                 <li>
                     <a class="text-gray-300 hover:text-white" href="#">
                         Home
@@ -35,11 +35,52 @@
                     </a>
                 </li>
             </ul>
+            <div class="hidden md:flex space-x-4">
+                <a class="bg-blue-500 text-white px-4 py-2 rounded-full" href="/Register">
+                    Register
+                </a>
+                <a class="bg-green-500 text-white px-4 py-2 rounded-full" href="/Login">
+                    Login
+                </a>
+            </div>
+            <button class="md:hidden text-white" id="menu-button">
+                <i class="fas fa-bars">
+                </i>
+            </button>
+        </div>
+        <div class="md:hidden" id="mobile-menu">
+            <ul class="flex flex-col space-y-4 mt-4">
+                <li>
+                    <a class="text-gray-300 hover:text-white" href="#">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a class="text-gray-300 hover:text-white" href="#">
+                        About
+                    </a>
+                </li>
+                <li>
+                    <a class="text-gray-300 hover:text-white" href="#">
+                        Contact
+                    </a>
+                </li>
+                <li>
+                    <a class="bg-blue-500 text-white px-4 py-2 rounded-full" href="#">
+                        Register
+                    </a>
+                </li>
+                <li>
+                    <a class="bg-green-500 text-white px-4 py-2 rounded-full" href="#">
+                        Login
+                    </a>
+                </li>
+            </ul>
         </div>
     </nav>
     <!-- Hero Section -->
     <section class="bg-gray-200 py-20">
-        <div class="container mx-auto text-center">
+        <div class="container mx-auto text-center px-4">
             <h1 class="text-4xl font-bold mb-4">
                 Reserve Your Salle Today
             </h1>
@@ -53,11 +94,11 @@
     </section>
     <!-- Available Salles -->
     <section class="py-20">
-        <div class="container mx-auto">
+        <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center mb-10">
                 Available Salles
             </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Salle 1 -->
                 <div class="bg-white shadow-lg rounded-lg overflow-hidden">
                     <img alt="Image of a modern conference room with a large table and chairs" height="400"
@@ -171,6 +212,16 @@
             </p>
         </div>
     </footer>
+    <script>
+        document.getElementById('menu-button').addEventListener('click', function() {
+            var menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+            } else {
+                menu.classList.add('hidden');
+            }
+        });
+    </script>
 </body>
 
 </html>
